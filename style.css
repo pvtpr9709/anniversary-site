@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', 'Segoe UI', cursive;
+  background: linear-gradient(135deg, #ffb6c1, #ffe4ec);
+  overflow: hidden;
+}
+
+.hidden { display: none; }
+
+/* LOCK */
+#lockScreen {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #ff5f9e, #ff9fc7);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#lockScreen input {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  margin: 10px;
+  text-align: center;
+}
+
+#lockScreen button {
+  padding: 10px 25px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+/* PAGES */
+.page {
+  display: none;
+  height: 100vh;
+  padding: 20px;
+  text-align: center;
+  color: #5a0032;
+}
+
+.page.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: none;
+  background: white;
+  color: #ff3d7f;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* CARDS */
+.card {
+  background: white;
+  border-radius: 25px;
+  padding: 15px;
+  max-width: 320px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: floatUp 1.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: contain;   /* 👈 keeps orientation */
+}
+
+.card.left { transform: rotate(-2deg); }
+.card.right { transform: rotate(2deg); }
+
+@keyframes floatUp {
+  from { transform: translateY(40px) scale(0.9); opacity: 0; }
+  to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+/* HEARTS */
+.hearts::before {
+  content: "💖 💕 💗 💘 💓";
+  position: fixed;
+  animation: float 8s linear infinite;
+  font-size: 1.5rem;
+  opacity: 0.6;
+}
+
+@keyframes float {
+  from { transform: translateY(100vh); }
+  to { transform: translateY(-100vh); }
+}
+
+/* FIREWORKS */
+#fireworks {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+.finale h1 {
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #ff7eb3; }
+  to { text-shadow: 0 0 25px #ff3d7f; }
+}

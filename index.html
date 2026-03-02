@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Suzuka ❤️ Doremon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- UNLOCK SCREEN -->
+<div id="lockScreen">
+  <h1>Only for Suzuka 💖</h1>
+  <p>Secret question 👀</p>
+  <p><b>Who loves you the most?</b></p>
+  <input type="text" id="answer" placeholder="Type here">
+  <button onclick="unlock()">Unlock ❤️</button>
+</div>
+
+<!-- FLOATING HEARTS -->
+<div class="hearts"></div>
+
+<!-- STORY -->
+<div id="story" class="hidden">
+
+  <section class="page active">
+    <h1 class="pop">Hey Suzuka 🌸</h1>
+    <p>I made this little world for us</p>
+    <button onclick="next()">Open ✨</button>
+  </section>
+
+  <section class="page">
+    <div class="card left">
+      <img src="images/img1.jpg">
+      <p>7 years ago… my favorite story began 💫</p>
+    </div>
+    <button onclick="next()">Next 💕</button>
+  </section>
+
+  <section class="page playful">
+    <div class="card right">
+      <img src="images/img2.jpg">
+      <p>You + Me = Unlimited madness 😜</p>
+    </div>
+    <button onclick="next()">More 😏</button>
+  </section>
+
+  <section class="page calm">
+    <div class="card left">
+      <img src="images/img7.JPG">
+      <p>Not perfect… but always real 💖</p>
+    </div>
+    <button onclick="next()">Still us 🫶</button>
+  </section>
+
+  <section class="page">
+    <div class="card right">
+      <img src="images/img11.jpg">
+      <p>Every place felt warmer with you 🌍</p>
+    </div>
+    <button onclick="next()">Final page ❤️</button>
+  </section>
+
+  <!-- FINAL PAGE -->
+  <section class="page finale">
+    <h1>Always & Forever</h1>
+    <div class="card left">
+      <img src="images/img12.jpg">
+      <p>Love you endlessly,<br>Your Doremon ❤️</p>
+    </div>
+    
+  </section>
+
+</div>
+
+<canvas id="fireworks"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
